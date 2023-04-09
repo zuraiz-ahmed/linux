@@ -1,0 +1,140 @@
+    1  hostnamectl set-hostname master
+    2  yum install pip
+    3  pip install anisible
+    4  pip install ansible
+    5  mv /usr/local/bin/ansible /usr/bin
+    6  ansible --version
+    7  clear
+    8  mkdir /etc/ansible
+    9  touch /etc/ansible/hosts
+   10  cd /etc/ansible
+   11  ssh-keygen -t rsa
+   12  cat /root/.ssh/id_rsa.pub
+   13  cat /root/.ssh/authorized_keys 
+   14  vi /etc/hosts
+   15  ssh root@client
+   16  vi /root/.ssh/authorized_keys 
+   17  cat /root/.ssh/authorized_keys 
+   18  cat /root/.ssh/id_rsa.pub 
+   19  ssh root@client
+   20  ls
+   21  vi hosts
+   22  ansible webservers -m ping
+   23  mkdir playbooks
+   24  cd playbooks
+   25  touch provision_webserver.yml
+   26  vi provision_webserver.yml 
+   27  touch index.html
+   28  vi index.html 
+   29  vi provision_webserver.yml
+   30  ansible-playbooks provision_webserver.yml --syntax-check
+   31  ansible-playbook provision_webserver.yml --syntax-check
+   32  ansible-playbook provision_webserver.yml 
+   33  cat provision_webserver.yml 
+   34  cat /root/.ssh/id_rsa.pub 
+   35  clear
+   36  cd /root
+   37  yum install git
+   38  git clone git@github.com:zuraiz-ahmed/linux.git
+   39  ls
+   40  cd linux
+   41  touch testfile
+   42  git status
+   43  git add .
+   44  git commit -m
+   45  git commit -m "adding my first file"
+   46  git config --global user.email "zuraiz2602@gmail.com"
+   47  git commit -m "adding my first file"
+   48  git status
+   49  git push
+   50  git status
+   51  git pull
+   52  ls
+   53  cp /etc/passwd .
+   54  ls
+   55  git status
+   56  git add
+   57  git add .
+   58  git commit
+   59  git commit -m "adding passwd"
+   60  git status
+   61  git push
+   62  git branch
+   63  git branch feature
+   64  git branch
+   65  git checkout feature
+   66  git branch
+   67  git status
+   68  git branch
+   69  git checkout main
+   70  git branch -d feature
+   71  git pull
+   72  git branch
+   73  ls
+   74  git pull
+   75  ls
+   76  git branch
+   77  git branch -d feature
+   78  cp /etc/ansible/playbooks/provision_webserver.yml .
+   79  ls
+   80  git status
+   81  git add
+   82  git add .
+   83  git commit -m "adding playbook"
+   84  git push
+   85  yum install docker
+   86  docker version
+   87  systemctl start docker
+   88  docker pull zabbix/zabbix-agent
+   89  docker images
+   90  docker run -d zabbix/zabbix-agent
+   91  docker ps
+   92  docker stop 6e9b33761985
+   93  docker ps
+   94  docker ps -a
+   95  clear
+   96  ls
+   97  touch Dockerfile
+   98  vi Dockerfile 
+   99  ls
+  100  touch index.html
+  101  vi index.html 
+  102  vi Dockerfile 
+  103  git status
+  104  git add
+  105  git add .
+  106  git commit -m
+  107  git commit -m "adding docker file"
+  108  git push
+  109  clear
+  110  ls
+  111  docker build -t "my first app"
+  112  docker build -t "myfirstapp"
+  113  docker build -t "myfirstapp" .
+  114  docker images
+  115  docker run -p 80:80 -d myfirstapp
+  116  curl ifconfig.me
+  117  vi index.html 
+  118  docker build -t "myfirstappv2.0"
+  119  docker build -t "myfirstappv2.0" .
+  120  docker images
+  121  docker run -p 80:80 -d myfirstappv2.0
+  122  docker ps
+  123  docker stop d0874d8a31b6
+  124  docker run -p 80:80 -d myfirstappv2.0
+  125  clear
+  126  ls
+  127  mkdir ansible
+  128  mv provision_webserver.yml ansible
+  129  ls
+  130  mkdir docker
+  131  mv Dockerfile docker
+  132  ls
+  133  cp index.html docker
+  134  cp index.html ansible
+  135  rm index.html 
+  136  ls
+  137  git add .
+  138  git commit -m "orginized files"
+  139  git push
+  140  history > devops_class
